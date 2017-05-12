@@ -6,30 +6,30 @@ function keyFromQuestion(q) {
 
 function questionFromKey(key) {
   var split = key.split(",");
-  return {1: +split[0], 2: +split[1], 3: +split[2], guess: +split[3]};
+  return { 1: +split[0], 2: +split[1], 3: +split[2], guess: +split[3] };
 }
 
-function makeQuestion(i, j, t){
-  return {1: i, 2: j, 3: i * j, guess: t};
+function makeQuestion(i, j, t) {
+  return { 1: i, 2: j, 3: i * j, guess: t };
 }
 
 function initialise() {
   var i, j, t, q, result = {};
-  for(i = 1; i <= 12; i++) {
+  for (i = 1; i <= 12; i++) {
     result[i] = [];
-    for(j = 1; j <= 12; j++) {
-      for(t = 2; t <= 3; t++) {
+    for (j = 1; j <= 12; j++) {
+      for (t = 2; t <= 3; t++) {
         q = makeQuestion(i, j, t);
-        result[i].push({q: q, score: 0});
+        result[i].push({ q: q, score: 0 });
       }
-    }  
+    }
   }
   return result;
 }
 
 function getMemory() {
   var item = localStorage.getItem("memory");
-  if(item === null) {
+  if (item === null) {
     memory = initialise();
     setMemory(memory);
   } else {
