@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table de multiplication</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Le jeu des Tables de Multiplications
+      </h1>
+    </header>
+
+    <main>
+      <div id="setup-area">        
+        <table id="table"></table>
+        <div style="height:30px;margin-top:10px;">
+          Selection:<span id="selected"></span>
+          <button id="all" style="float:right;">
+            Toute les tables
+          </button>
+          <button id="invert" style="float:right;">
+            Inverser
+          </button>
+        </div>
+        <div style="height:30px;margin-top:10px;">
+          <button id="play" style="float:right;">
+            Jouer!
+          </button>
+        </div>
+      </div>
+      <div id="play-area" style="display:none;">
+        <div id="map">
+          
+        </div>
+        <div id="play-line">
+          <span id="play1" class="number">&nbsp;</span>x
+          <span id="play2" class="number">&nbsp;</span>=
+          <span id="play3" class="number">&nbsp;</span>          
+        </div>
+        <div style="height:30px;margin-top:10px;">
+          Score: <span id="score">0</span> points 
+          Time spent: <span id="timer">80</span>s
+          <button id="stop" style="float:right;">
+            Stop!
+          </button>
+        </div>
+        <div id="past">
+          
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://glitch.com/edit/#!/multiplication">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    
+    <script src="/memory.js"></script>
+    <script src="/play.js"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
